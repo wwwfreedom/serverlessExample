@@ -1,0 +1,96 @@
+--- !com.amazonaws.mobilehub.v0.Project 
+features:
+  cloudlogic: !com.amazonaws.mobilehub.v0.CloudLogic 
+    components:
+      ServerlessReactExampleCRUD: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: ServerlessReactExampleCRUD
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /ServerlessReactExample: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/rverlessReactExample-20180527145242.zip
+            description: 'Handler for calls to resource path : /ServerlessReactExample/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: q7gVllPep3ie+oaZBu5mWRZ7kiYU8fdO2SRy89yVuuM=
+            memorySize: '128'
+            modified: '2018-05-27T04:54:21.040+0000'
+            name: rverlessReactExample
+            runtime: nodejs6.10
+            timeout: '3'
+            version: V8FRn.8E7AMI1xw0gIPAZipaXwi52CIp
+          '/ServerlessReactExample/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/rverlessReactExample-20180527145242.zip
+            description: 'Handler for calls to resource path : /ServerlessReactExample/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: q7gVllPep3ie+oaZBu5mWRZ7kiYU8fdO2SRy89yVuuM=
+            memorySize: '128'
+            modified: '2018-05-27T04:54:21.040+0000'
+            name: rverlessReactExample
+            runtime: nodejs6.10
+            timeout: '3'
+            version: mxl3uXipsBzFyyn00FVbQXLxXa6WCRHj
+      sampleCloudApi: !com.amazonaws.mobilehub.v0.API 
+        attributes:
+          name: sampleCloudApi
+          requires-signin: false
+          sdk-generation-stage-name: Development
+        paths:
+          /items: !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180527123912.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: MyZacbpKGNM356Af76j6NZ6Hwk6UP7dCngsGa91+iOo=
+            memorySize: '128'
+            modified: '2018-05-27T02:40:26.330+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: wTUKIl3MwVQtH6dQgTxt184WyK4UXUsL
+          '/items/{proxy+}': !com.amazonaws.mobilehub.v0.Function 
+            codeFilename: uploads/sampleLambda-20180527123912.zip
+            description: 'Handler for calls to resource path : /items/{proxy+}'
+            enableCORS: true
+            environment: {}
+            handler: lambda.handler
+            hashcode: MyZacbpKGNM356Af76j6NZ6Hwk6UP7dCngsGa91+iOo=
+            memorySize: '128'
+            modified: '2018-05-27T02:40:26.330+0000'
+            name: sampleLambda
+            runtime: nodejs6.10
+            timeout: '3'
+            version: EanZDmeBd5rZ9vJJGmnSuFuO9ILDT8Dk
+  content-delivery: !com.amazonaws.mobilehub.v0.ContentDelivery 
+    attributes:
+      enabled: true
+      visibility: public-global
+    components:
+      release: !com.amazonaws.mobilehub.v0.Bucket {}
+  database: !com.amazonaws.mobilehub.v0.Database 
+    components:
+      database-nosql: !com.amazonaws.mobilehub.v0.NoSQLDatabase 
+        tables:
+          - !com.amazonaws.mobilehub.v0.NoSQLTable 
+            attributes:
+              ID: S
+              ItemDescription: S
+              ItemName: S
+              ItemPrice: N
+            hashKeyName: ID
+            hashKeyType: S
+            rangeKeyName: ''
+            rangeKeyType: ''
+            tableName: ___DYNAMIC_PREFIX___-ServerlessReactExample
+            tablePrivacy: public
+  mobile-analytics: !com.amazonaws.mobilehub.v0.Pinpoint 
+    components:
+      analytics: !com.amazonaws.mobilehub.v0.PinpointAnalytics {}
+  sign-in: !com.amazonaws.mobilehub.v0.SignIn {}
+name: serverless-web-app-example-2018-05-27-11-55-32
+region: ap-southeast-2
